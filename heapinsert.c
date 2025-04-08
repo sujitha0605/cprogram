@@ -10,7 +10,7 @@ void swap(int *a, int *b)
     *a=*b;
     *b=temp;
 }
-void heapify(int index)
+void heapifyup(int index)
 {
     int parent=(index-1)/2;
     while(index>0 && heap[index]>heap[parent])
@@ -23,7 +23,7 @@ void heapify(int index)
 void insert(int value)
 {
     heap[size]=value;
-    heapify(size);
+    heapifyup(size);
     size++;
 }
 void printheap()
